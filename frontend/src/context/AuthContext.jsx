@@ -9,10 +9,10 @@ export const AuthProvider = ({ children }) => {
 
     const login = async (email, password) => {
         const res = await axios.post('http://localhost:8080/api/auth/login', { email, password });
-        // const data = await res.json();
-        console.log(res.data);
         setToken(res.data.token);
-        setUser({ id: res.data.payload.user.id, role: res.data.payload.user.role });
+        const loggedInUser = { id: res.data.payload.user.id, role: res.data.payload.user.role };
+        setUser(loggedInUser);
+        return loggedInUser; // Return the user object
     };
 
     const register = async (username, email, password, role) => {
