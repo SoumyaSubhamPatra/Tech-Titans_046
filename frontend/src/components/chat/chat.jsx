@@ -11,8 +11,8 @@ const Chat = ({ roomId }) => {
     useEffect(() => {
         socket.emit('joinRoom', { roomId });
 
-        socket.on('message', (msg) => {
-            setMessages((prevMessages) => [...prevMessages, msg]);
+        socket.on('message', (message) => {
+            setMessages((prevMessages) => [...prevMessages, message]);
         });
 
         return () => {
