@@ -20,11 +20,11 @@ Group Presentation :- Presentation Link
 One-to-One Questionaries :- Questionaries Link
 Video Walkthrough of the Project
 Attach a very short video walkthrough of all of the features [1 - 3 minutes]
-Video Link:-
+Video Link:-https://www.youtube.com/watch?v=Xe0FLyCJLiU
 
 # Video Walkthrough of the Codebase
-Attach a very short video walkthrough of the codebase [1 - 5 minutes]
-Video Link:-
+Attach a very short video walkthrough of the questions on the Project [1 - 5 minutes]
+Video Link:-https://www.youtube.com/watch?v=zziKzGWdilE
 
 # Screenshot
 
