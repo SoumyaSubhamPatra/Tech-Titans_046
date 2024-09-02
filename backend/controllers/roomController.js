@@ -49,3 +49,29 @@ exports.joinRoom = async (req, res) => {
         res.status(500).send('Server error');
     }
 };
+
+// controllers/roomController.js
+
+exports.endRoom = async (req, res) => {
+    const { roomId } = req.body;
+    try {
+        const room = await Room.findById(roomId);
+        if (!room) return res.status(404).json({ msg: 'Room not found' });
+
+        if (room.owner.toString() !== req.user.id) {
+            return res.status(403).json({ msg: 'Only the room owner can end the room' });
+        }
+
+        // Remove the room
+        await Room.findByIdAndDelete(roomId);
+
+        // Optionally notify all users
+        req.app.get('io').to(roomId).emit('room-ended');
+
+        res.json({ msg: 'Room ended successfully' });
+    } catch (err) {
+        console.error(err.message);
+        res.status(500).send('Server error');
+    }
+};
+

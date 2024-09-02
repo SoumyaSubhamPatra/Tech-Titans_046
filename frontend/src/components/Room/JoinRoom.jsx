@@ -3,6 +3,7 @@ import AuthContext from '../../context/AuthContext';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { Button, TextField, Container, Typography } from '@mui/material';
+import LogoutButton from '../Auth/LogoutButton';
 
 const JoinRoom = () => {
     const { token } = useContext(AuthContext);
@@ -23,6 +24,7 @@ const JoinRoom = () => {
 
     return (
         <Container>
+            <LogoutButton />
             <Typography variant="h4" gutterBottom>Join Room</Typography>
             <form onSubmit={handleSubmit}>
                 <TextField 
