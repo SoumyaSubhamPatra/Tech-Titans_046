@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import io from 'socket.io-client';
 import { List, ListItem, TextField, Button, Container } from '@mui/material';
 
-const socket = io('http://localhost:8080');
+const socket = io('http://localhost:8080', { transports: ['websocket'] });
 
 const Chat = ({ roomId }) => {
     const [messages, setMessages] = useState([]);
@@ -11,29 +11,39 @@ const Chat = ({ roomId }) => {
     useEffect(() => {
         socket.emit('joinRoom', { roomId });
 
-        socket.on('message', (msg) => {
-            setMessages((prevMessages) => [...prevMessages, msg]);
+        socket.on('message', (message) => {
+            setMessages((prevMessages) => [...prevMessages, message]);
         });
 
         return () => {
-            socket.off();
+            socket.off(); 
         };
-    }, [roomId]);
+    });
 
-    const sendMessage = () => {
+    const sendMessage = (event) => {
+        event.preventDefault();
+        setMessage(event.target.value); 
         socket.emit('sendMessage', { roomId, message });
-        setMessage('');
+        console.log(message);
+        
     };
 
     return (
         <Container>
             <List>
-                {messages.map((msg, index) => (
-                    <ListItem key={index}>{msg}</ListItem>
+                {messages.forEach((msg, index) => (
+                    <ListItem >{msg}</ListItem>
                 ))}
             </List>
-            <TextField fullWidth value={message} onChange={(e) => setMessage(e.target.value)} />
-            <Button onClick={sendMessage} variant="contained" color="primary">Send</Button>
+            <TextField
+                fullWidth
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                placeholder="Type your message..."
+            />
+            <Button onClick={sendMessage} variant="contained" color="primary">
+                Send
+            </Button>
         </Container>
     );
 };

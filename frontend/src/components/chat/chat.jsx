@@ -14,11 +14,7 @@ const Chat = ({ roomId }) => {
         socket.on('message', (message) => {
             setMessages((prevMessages) => [...prevMessages, message]);
         });
-
-        return () => {
-            socket.off(); 
-        };
-    }, [roomId]);
+    }, [message]);
 
     const sendMessage = (event) => {
         event.preventDefault();

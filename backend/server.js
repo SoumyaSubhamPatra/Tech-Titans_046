@@ -30,7 +30,7 @@ io.on('connection', (socket) => {
     });
 
     socket.on('sendMessage', ({ roomId, userId, message }) => {
-        io.to(roomId).emit('message', { userId, message });
+        io.to(roomId).emit('message', { message });
     });
 
     socket.on('disconnect', () => {
