@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken');
 
 const authMiddleware = (req, res, next) => {
+    console.log("insideAuth");
     const token = req.header('Authorization').replace('Bearer ', '');
     console.log(token);
     if (!token) return res.status(401).json({ msg: 'No token, authorization denied' });
