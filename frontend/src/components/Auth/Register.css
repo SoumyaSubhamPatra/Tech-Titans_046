@@ -35,16 +35,19 @@ form {
   flex-direction: column;
 }
 
-.textField input {
+.textField input,
+.select input {
   color: #e5e5e5;
   background-color: #333333;
 }
 
-.textField label {
+.textField label,
+.select label {
   color: #b3b3b3;
 }
 
-.textField .MuiOutlinedInput-root {
+.textField .MuiOutlinedInput-root,
+.select .MuiOutlinedInput-root {
   & fieldset {
     border-color: #444;
   }

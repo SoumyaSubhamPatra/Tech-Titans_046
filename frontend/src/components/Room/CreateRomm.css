@@ -1,16 +1,18 @@
-/* CreateRoom.css */
-
 body {
-  background-color: #141414; /* Netflix dark background */
-  color: #e5e5e5; /* Netflix light text */
+  background-color: #141414;
+  color: #e5e5e5;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
 }
 
 .container {
   max-width: 450px;
-  margin: 80px auto;
   padding: 2rem;
-  background-color: #2c2c2c; /* Slightly lighter than the background */
+  background-color: #2c2c2c;
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.75);
 }
@@ -22,20 +24,9 @@ h4 {
   font-weight: 700;
 }
 
-.alert {
-  margin-bottom: 1rem;
-  background-color: #b81d24; /* Netflix red for errors */
-  color: #ffffff;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
 .textField input {
   color: #e5e5e5;
-  background-color: #333333; /* Darker input background */
+  background-color: #333333;
 }
 
 .textField label {
@@ -48,17 +39,17 @@ form {
   }
 
   &:hover fieldset {
-    border-color: #e50914; /* Netflix red on hover */
+    border-color: #e50914;
   }
 
   &.Mui-focused fieldset {
-    border-color: #e50914; /* Netflix red on focus */
+    border-color: #e50914;
   }
 }
 
 .button {
   margin-top: 1rem;
-  background-color: #e50914; /* Netflix red */
+  background-color: #e50914;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -69,36 +60,15 @@ form {
 }
 
 .button:hover {
-  background-color: #f40612; /* Lighter Netflix red on hover */
+  background-color: #f40612;
 }
 
 .link {
-  color: #e50914; /* Netflix red for links */
-  text-align: center;
-}
-
-.link a {
-  color: inherit;
+  color: #e5e5e5;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
 }
 
-.link a:hover {
-  text-decoration: underline;
-}
-
-.secondaryButton {
-  margin-top: 1rem;
-  background-color: #b81d24; /* Darker red for secondary actions */
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 0.8rem;
-  cursor: pointer;
-  font-weight: 700;
-  transition: background-color 0.3s ease;
-}
-
-.secondaryButton:hover {
-  background-color: #f40612; /* Lighter Netflix red on hover */
+.link:hover {
+  color: #e50914;
 }
