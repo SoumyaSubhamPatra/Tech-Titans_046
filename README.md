@@ -59,7 +59,7 @@ Clone the Repository:
 
 bash
 Copy code
-git clone https://github.com/your-username/watch-video-together.git
+git clone https://github.com/SoumyaSubhamPatra/Tech-Titans_046
 cd watch-video-together
 Install Dependencies:
 
