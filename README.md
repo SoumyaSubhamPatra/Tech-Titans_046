@@ -1,110 +1,166 @@
-Watch Video Together
-1. Introduction
-Watch Video Together is a web application that allows users to create or join virtual rooms where they can watch YouTube videos in perfect synchronization with friends and chat in real-time. This project enhances online social interactions by providing a platform for sharing video-watching experiences, even when users are physically apart.
+# Tech-Titans_046
+# Construct week project work
 
-2. Project Goal
-The goal of this project is to create an engaging, user-friendly platform where multiple users can join a room, watch YouTube videos together, and communicate via real-time chat. Advanced features like real-time reactions, customizable avatars, and a voting system for the next video enhance user engagement.
+# Project Title
+<h1>Watch Video Together</h1>
 
-3. Features
-3.1 Core Features
-User Authentication:
+# Introduction
+<p>Watch Video Together is a web application that allows users to create or join virtual rooms where they can watch YouTube videos in perfect synchronization with friends and chat in real-time. This project enhances online social interactions by providing a platform for sharing video-watching experiences, even when users are physically apart.</p>
 
-Users can sign up, log in, and log out securely using JWT tokens.
-Room Creation and Joining:
+# Project Type
+<h3>Full_Stack-Web Application</h3>
 
-Users can create a room with a unique identifier and share the link for others to join.
-Users can join an existing room using the shared link.
-YouTube Video Sync:
+# Deployed Link
+Invoice and Payment Tracker (React) :- https://watchtogather.netlify.app/
+GitHub Link :- GitHub Repository
+Directory Structure
 
-Users can paste a YouTube video link, and the video will be played in sync across all users in the room.
-Play, pause, and seek actions by any user are reflected for all users in real-time.
-Real-Time Chat:
+# Contribution Link
+Group Presentation :- Presentation Link
+One-to-One Questionaries :- Questionaries Link
+Video Walkthrough of the Project
+Attach a very short video walkthrough of all of the features [1 - 3 minutes]
+Video Link:-
 
-Users can chat with each other in real-time while watching the video.
-The chat is displayed alongside the video player.
-User Presence:
+# Video Walkthrough of the Codebase
+Attach a very short video walkthrough of the codebase [1 - 5 minutes]
+Video Link:-
 
-A list of users currently in the room is displayed.
-Moderation Tools:
+# Screenshot
 
-The room creator (host) can kick users out and control video playback.
-3.2 Advanced Features
-Reactions and Emojis:
 
-Users can send real-time reactions and emojis that appear on the screen.
-Customizable Avatars:
+# Features
+<ol>
+  <li>User Authentication
+    <ul>
+      <li>Secure login and signup</li>
+      <li>User roles and permissions</li>
+    </ul>
+  </li>
+  <li>Room Creation and Joining:
+    <ul>
+      <li>Users can create a room with a unique identifier and share the link for others to join.</li>
+<li>Users can join an existing room using the shared link.</li>
+    </ul>
+  </li>
+  <li>YouTube Video Sync
+    <ul>
+      <li>Users can paste a YouTube video link, and the video will be played in sync across all users in the room.</li>
+      <li>Play, pause, and seek actions by any user are reflected for all users in real-time</li>
+    </ul>
+  </li>
+  <li>Real-Time Chat
+    <ul>
+      <li>Users can chat with each other in real-time while watching the video.</li>
+      <li>The chat is displayed alongside the video player.</li>
+    </ul>
+  </li>
+  <li>User Presence:
+    <ul>
+      <li>A list of users currently in the room is displayed.</li>
+    </ul>
+  </li>
+  <li>Moderation Tools:
+    <ul>
+      <li>The room creator (host) can kick users out and control video playback.</li>
+    </ul>
+  </li>
+  <li>Notifications
+    <ul>
+      <li>Email reminders for due payments</li>
+      <li>Notifications for new invoices and payments</li>
+    </ul>
+  </li>
+  <li>Screen Sharing:
+    <ul>
+      <li>The host can share their screen instead of a YouTube video.</li>
+    </ul>
+  </li>
+  <li>Notification System:
+    <ul>
+      <li>Users receive notifications for new messages, users joining or leaving, and other important events.</li>
+    </ul>
+  </li>
+</ol>
 
-Users can create or upload avatars to represent them in the chat.
-Voting System for Next Video:
+# Design Decisions or Assumptions
+# Design Decisions:
 
-Users can suggest and vote for the next YouTube video to watch.
-Video Timestamp Comments:
 
-Users can leave comments tied to specific timestamps in the video.
-Screen Sharing:
 
-The host can share their screen instead of a YouTube video.
-Notification System:
+ React Framework: React is used for building the user interface.
+Chakra UI and Tailwind CSS: These are used for styling and creating a responsive design.
+Redux: Used for state management.
+Vite: Used as the build tool for faster development and optimized production builds.
+Assumptions:
 
-Users receive notifications for new messages, users joining or leaving, and other important events.
-4. Technology Stack
-Frontend: React.js, Redux (or Context API), CSS/SCSS
-Backend: Node.js, Express.js
-Database: MongoDB
-Real-Time Functionality: Socket.IO
-Authentication: JWT (JSON Web Tokens)
-Deployment: Vercel (Frontend), Heroku or AWS (Backend)
-5. Installation and Setup
-5.1 Clone the Repository
+API Services: The application assumes that the backend API services for user authentication, invoice management, and payment processing are available and reliable.
+Responsive Design: The application is designed to work on both desktop and mobile devices.
+Performance: The application assumes acceptable performance considering the use of modern libraries and frameworks.
+Installation & Getting Started
+Detailed instructions on how to install, configure, and get the project running.
+
 bash
 Copy code
-git clone https://github.com/SoumyaSubhamPatra/Tech-Titans_046
-cd watch-video-together
-5.2 Install Dependencies
-For frontend:
-bash
-Copy code
-cd frontend
+# Clone the repository
+git clone https://github.com/SoumyaSubhamPatra/Tech-Titans_046.git
+
+# Navigate to the project directory
+cd Tech-Titans_046
+
+# Install dependencies
 npm install
-For backend:
-bash
-Copy code
-cd backend
-npm install
-5.3 Environment Variables
-Create a .env file in the backend directory and add the following:
 
-bash
-Copy code
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret_key
-PORT=your_server_port
-5.4 Run the Application
-Start the backend server:
-bash
-Copy code
-cd backend
+# Start the development server
 npm start
-Start the frontend development server:
+Usage
+Instructions and examples on how to use your project.
+
+Download or Clone the Project:
+
+Clone the repository to your local machine using Git.
+Or download the project as a zip file and extract it.
+Open the Project Files:
+
+Navigate to the project directory and open the project in a code editor like Visual Studio Code.
+Install Dependencies:
+
+The project uses npm for package management. Run npm install to install the required dependencies.
+Run the Project:
+
+Start the development server using npm start.
+Open http://localhost:3000 in your web browser to view the project.
+Backend Server:
+
+Ensure the backend server is running and accessible. For a mock server, you can use json-server.
 bash
 Copy code
-cd frontend
-npm start
-5.5 Access the Application
-Open your browser and go to http://localhost:3000 to access the application.
+# Install json-server globally
+npm install -g json-server
 
-6. Project Structure
-frontend/: Contains the React.js code for the client-side application.
-backend/: Contains the Node.js and Express.js code for the server-side application.
-README.md: Documentation of the project.
-7. Contributing
-Contributions are welcome! Please follow these steps to contribute:
+# Run the mock server
+json-server --watch db.json
+Credentials
+Provide user credentials for authenticated pages
 
-Fork the repository.
-Create a new branch (git checkout -b feature/your-feature-name).
-Commit your changes (git commit -m 'Add some feature').
-Push to the branch (git push origin feature/your-feature-name).
-Open a pull request.
-8. Feedback
-We value your feedback and suggestions! Please open an issue if you have any feedback, suggestions, or bug reports. We appreciate your input in helping us improve the project!
+GitHub user-id
+
+Team-Lead: Soumya Subham Patra (SoumyaSubhamPatra)
+Collab-1: Suraj Pradip Kamble (suraj0119)
+Collab-1: Arnab Dutta (ar98anb)
+
+Manager
+I.A: Aashis Kumar
+Technology Stack
+A brief overview of the technologies used in the project:
+
+React
+TypeScript
+Chakra UI
+Tailwind CSS
+Redux
+Vite
+Node.js
+Express
+MongoDB
 
