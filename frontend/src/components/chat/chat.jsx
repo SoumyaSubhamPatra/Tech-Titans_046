@@ -24,7 +24,6 @@ const Chat = ({ roomId }) => {
         event.preventDefault();
         setMessage(event.target.value); 
         socket.emit('sendMessage', { roomId, message });
-
         console.log(message);
         
     };
