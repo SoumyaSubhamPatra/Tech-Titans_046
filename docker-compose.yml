@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  # React / Vite app
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: f1
+    ports:
+      - "3000:3000"   # change to "80:80" if your frontend Dockerfile serves via nginx on port 80
+    restart: unless-stopped
+    depends_on:
+      - backend
+    networks:
+      - app_network
+
+  # Node backend
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: b1
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    driver: bridge
